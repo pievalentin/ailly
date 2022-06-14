@@ -36,8 +36,8 @@ class DAG():
         plt.savefig(filename, dpi=300, bbox_inches='tight')
 
     def _histogram(self):
-        degree_histogram = nx.degree_histogram(self.graph)
-        plt.bar(range(1, len(degree_histogram)+1), degree_histogram)
+        degree_histogram = dict(self.graph.out_degree)
+        plt.bar(*zip(*degree_histogram.items()))
         plt.ylabel('frequency')
         plt.xlabel('Node id')
         plt.title('Histogram of vertex out-degrees')
