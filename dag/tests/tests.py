@@ -1,6 +1,8 @@
-from dag import DAG
 import tempfile
 from pathlib import Path
+
+from dag import DAG
+
 
 def test_nb_vertices_and_edges():
     edges = [(0, 1),(1,1),(2,3),(1,3)]
