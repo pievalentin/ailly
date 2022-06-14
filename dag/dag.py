@@ -5,7 +5,7 @@ import h5py
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
-from pathlib import Path
+
 
 class DAG():
     def __init__(self, edges: Union[np.ndarray, List[Tuple[int, int]]]):
